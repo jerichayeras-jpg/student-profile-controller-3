@@ -1,0 +1,134 @@
+
+:root {
+    --bg-color: #f4f6f9;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+    --border-color: #cccccc;
+    --primary-color: #0056b3;
+    --active-color: #28a745;
+    --inactive-color: #dc3545;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  
+  body.dark-theme {
+    --bg-color: #1e1e1e;
+    --text-color: #f4f6f9;
+    --card-bg: #2d2d2d;
+    --border-color: #444444;
+    --primary-color: #378ad6;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  
+  .control-panel, .profile-section {
+    flex: 1 1 400px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+  }
+  
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  button {
+    flex: 1 1 calc(50% - 5px);
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  .form-message {
+    margin-top: 15px;
+    font-weight: bold;
+    min-height: 1.2em;
+  }
+  
+  
+  .profile-card {
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 6px solid #ccc;
+    background-color: var(--card-bg);
+  }
+  
+  .profile-card.active {
+    border-left-color: var(--active-color);
+  }
+  
+  .profile-card.inactive {
+    border-left-color: var(--inactive-color);
+  }
+  
+  #profileStatus {
+    font-weight: bold;
+  }
+  
+  .profile-card.active #profileStatus {
+    color: var(--active-color);
+  }
+  
+  .profile-card.inactive #profileStatus {
+    color: var(--inactive-color);
+  }
+  
+  .details-panel {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border-color);
+  }
+  
+  
+  .hidden {
+    display: none !important;
+  }
